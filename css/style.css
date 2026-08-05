@@ -676,8 +676,8 @@ a {
 /* 日本の飛び込み文化ページ */
 
 .culture-hero {
-  background-image: url("../images/hero-optimized.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../images/culture-hero-optimized.jpg");
+  background-position: center 65%;
 }
 
 .culture-grid {
