@@ -331,7 +331,9 @@ a {
 }
 
 .safety-hero {
-  background-image: url("../images/hero-optimized.jpg");
+  background-image: url("../images/safety-hero-optimized.jpg");
+  background-position: center 65%;
+  background-repeat: no-repeat;
 }
 
 .subpage-hero-overlay {
