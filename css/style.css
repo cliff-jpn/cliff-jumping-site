@@ -548,7 +548,7 @@ a {
 /* 飛び込みとはページ */
 
 .about-hero {
-  background-image: url("../images/hero-optimized.jpg");
+  background-image: url("../images/about-hero-optimized.jpg");
 }
 
 .about-grid {
@@ -985,4 +985,233 @@ body.menu-open {
     border-bottom: 0;
   }
 
+}
+/* ==================================================
+   飛び込みとはページ
+================================================== */
+
+.about-page main {
+  overflow: hidden;
+}
+
+/* ヒーロー画像 */
+.about-page .about-hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 560px;
+  color: #ffffff;
+
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.68) 0%,
+      rgba(0, 0, 0, 0.25) 55%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+    url("../images/about-hero-optimized.jpg");
+
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+.about-page .about-hero__content {
+  width: calc(100% - 48px);
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-bottom: 72px;
+}
+
+.about-page .about-hero__label {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.about-page .about-hero h1 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+}
+
+.about-page .about-hero__message {
+  margin: 0;
+  max-width: 720px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+}
+
+/* 本文セクション */
+.about-page .section {
+  padding: 96px 24px;
+}
+
+.about-page .section--gray {
+  background-color: #f2f5f4;
+}
+
+.about-page .container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.about-page .section h2 {
+  margin: 0 0 28px;
+  color: #1b2426;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+
+.about-page .section p {
+  max-width: 860px;
+  margin: 0 0 16px;
+  color: #364144;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.about-page .section p:last-child {
+  margin-bottom: 0;
+}
+
+/* セクション見出し */
+.about-page .section-heading {
+  margin-bottom: 42px;
+}
+
+.about-page .section-label {
+  margin: 0 0 14px;
+  color: #147f86;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+/* 3要素 */
+.about-page .three-elements {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.about-page .element-card {
+  position: relative;
+  min-height: 100%;
+  padding: 34px 30px 36px;
+  background-color: #ffffff;
+  border-top: 4px solid #147f86;
+  box-shadow: 0 10px 30px rgba(20, 38, 40, 0.08);
+}
+
+.about-page .element-number {
+  margin: 0 0 24px;
+  color: #147f86;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.about-page .element-card h3 {
+  margin: 0 0 18px;
+  color: #1b2426;
+  font-size: 1.45rem;
+  line-height: 1.4;
+}
+
+.about-page .element-card p {
+  margin: 0;
+  color: #455154;
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+/* 飛ぶと落ちるの違い */
+.about-page .section:not(.section--gray) + .section:not(.section--gray) {
+  border-top: 1px solid #dfe5e4;
+}
+
+/* スマートフォン・タブレット */
+@media screen and (max-width: 768px) {
+  .about-page .about-hero {
+    min-height: 460px;
+    background-position: center center;
+  }
+
+  .about-page .about-hero__content {
+    width: calc(100% - 40px);
+    padding-bottom: 46px;
+  }
+
+  .about-page .about-hero h1 {
+    margin-bottom: 16px;
+    font-size: 2.45rem;
+  }
+  @media screen and (max-width: 768px) {
+  .about-page .about-hero__message {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .about-page .section p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .about-page .element-card p {
+    line-height: 1.7;
+  }
+  }
+
+  .about-page .section {
+    padding: 64px 20px;
+  }
+
+  .about-page .section-heading {
+    margin-bottom: 28px;
+  }
+
+  .about-page .section h2 {
+    margin-bottom: 22px;
+    font-size: 1.7rem;
+  }
+
+  .about-page .section p {
+    font-size: 0.95rem;
+    line-height: 1.9;
+  }
+
+  .about-page .three-elements {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-page .element-card {
+    padding: 26px 22px 28px;
+  }
+
+  .about-page .element-number {
+    margin-bottom: 16px;
+  }
+
+  .about-page .element-card h3 {
+    font-size: 1.3rem;
+  }
+}
+.about-page .difference-section p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.about-page .difference-section p:last-child {
+  margin-bottom: 0;
 }
